@@ -12,11 +12,13 @@ export function TodoSection() {
     },
   ]);
 
-  const addTodoItem = (title) => {     const newTodo = { id: generateId(), text: title };     
-  setTodos((currentTodos) => [...currentTodos, newTodo]);   };
+  const addTodoItem = (title) => {
+    const newTodo = { id: generateId(), text: title };
+    setTodos((currentTodos) => [...currentTodos, newTodo]);
+  };
 
   const deleteTodoItem = (id) => {
-    // Delete item state logic
+    setTodos((currentTodos) => currentTodos.filter((todo) => todo.id !== id));
   };
 
   return (
