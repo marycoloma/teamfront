@@ -12,10 +12,8 @@ export function TodoSection() {
     },
   ]);
 
-  const addTodoItem = (title) => {
-    const newTodo = { id: generateId(), title };
-    // add item to the existing array
-  };
+  const addTodoItem = (title) => {     const newTodo = { id: generateId(), text: title };     
+  setTodos((currentTodos) => [...currentTodos, newTodo]);   };
 
   const deleteTodoItem = (id) => {
     // Delete item state logic
