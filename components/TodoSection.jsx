@@ -4,14 +4,13 @@ import { TodoList } from "./TodoList";
 import { generateId } from "../utils/generateId";
 
 export function TodoSection() {
-  // TODO (state): Declare todos as state
-  const todos = [
+  const [todos, setTodos] = useState([
     { id: "1", text: "Learn useState" },
     {
       id: "2",
       text: "Practice typescript refactoring",
     },
-  ];
+  ]);
 
   const addTodoItem = (title) => {
     const newTodo = { id: generateId(), title };
